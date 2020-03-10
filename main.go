@@ -37,7 +37,7 @@ func main() {
 		influxTarget    = flag.String("influx-url", "http://127.0.0.1:8086", "The influxdb target url.")
 		checkFrequency  = flag.Int("check-frequency", 60, "The cache check frequency in minutes.")
 		expirationLimit = flag.Int("expiration-limit", 1440, "The cache expiration limit.")
-		logLevel        = flag.Int("log-level", 1, "Set the loglevel : Debug(0) Info(1) Warning(2) Error(3) Fatal(4).")
+		logLevel        = flag.Int("log-level", 1, "Set the loglevel: Fatal(0) Error(1) Warning(2) Info(3) Debug(4).")
 	)
 	flag.Parse()
 
@@ -49,7 +49,7 @@ func main() {
 
 	// Init logger
 	var logLevelTyped hllogger.LogLevel
-	if hllogger.LogLevel(*logLevel) < hllogger.Debug || hllogger.LogLevel(*logLevel) > hllogger.Fatal {
+	if hllogger.LogLevel(*logLevel) > hllogger.Debug || hllogger.LogLevel(*logLevel) < hllogger.Fatal {
 		fmt.Fprint(os.Stderr, "WARNING: log level is invalid, defaulting to Info(1)\n")
 		logLevelTyped = hllogger.Info
 	} else {
