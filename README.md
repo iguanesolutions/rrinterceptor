@@ -22,7 +22,7 @@ Remote Read Interceptor has the following command-line flags:
 * `-influx-url` - the influxdb target url (default: 'http://127.0.0.1:8086').
 * `-check-frequency` - the cache check frequency in minutes (default: 60).
 * `-expiration-limit` - the cache expiration limit (default: 1440).
-* `-loglevel` - set the loglevel : Debug(0) Info(1) Warning(2) Error(3) Fatal(4) (default: '1').
+* `-log-level` - set the loglevel : Debug(0) Info(1) Warning(2) Error(3) Fatal(4) (default: '1').
 
 ## Prometheus setup
 
