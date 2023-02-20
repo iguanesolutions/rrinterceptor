@@ -1,5 +1,7 @@
 # Remote Read Interceptor
 
+**Notice:** **⚠️** This repository is deprecated. This is not maintained anymore and will not receive any patches. **⚠️**
+
 Remote Read Interceptor is a reverse proxy to be placed between a Prometheus and a "remote-read" InfluxDB. It allows to dynamically change the influxdb database RP used to gather points based on the Prometheus remote read request time range.
 
 ## Install
